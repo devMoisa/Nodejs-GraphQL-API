@@ -1,6 +1,6 @@
 import { ApolloServer } from 'apollo-server';
-import { resolvers, typeDefs } from './queries/schema';
-import { context } from './queries/context';
+import { resolvers, typeDefs } from './graphql/schema';
+import { context } from './graphql/context';
 
 const server = new ApolloServer({
   typeDefs: typeDefs,
