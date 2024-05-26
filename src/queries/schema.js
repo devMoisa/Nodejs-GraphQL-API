@@ -1,6 +1,8 @@
 import { gql } from 'apollo-server';
 import { userTypeDefs } from './user/typedefs';
 import { userResolvers } from './user/resolvers';
+import { postTypeDefs } from './post/typedefs';
+import { postResolver } from './post/resolvers';
 
 const rootTypeDefs = gql`
   type Query {
@@ -14,5 +16,5 @@ const rootResolvers = {
   },
 };
 
-export const typeDefs = [rootTypeDefs, userTypeDefs];
-export const resolvers = [rootResolvers, userResolvers];
+export const typeDefs = [rootTypeDefs, userTypeDefs, postTypeDefs];
+export const resolvers = [rootResolvers, userResolvers, postResolver];
