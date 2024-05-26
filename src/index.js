@@ -4,6 +4,7 @@ const server = new ApolloServer({
   typeDefs: gql`
     type Query {
       hello: String
+      hi: String
     }
   `,
 
@@ -11,6 +12,9 @@ const server = new ApolloServer({
     Query: {
       hello: () => {
         return 'Hello World';
+      },
+      hi: () => {
+        return 'Hi';
       },
     },
   },
