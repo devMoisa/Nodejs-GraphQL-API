@@ -3,7 +3,8 @@ import { ApolloServer, gql } from 'apollo-server';
 const server = new ApolloServer({
   typeDefs: gql`
     type Query {
-      user: User
+      user: User!
+      users: [User!]!
     }
 
     type User {
@@ -20,6 +21,16 @@ const server = new ApolloServer({
           userName: 'devMoisa',
         };
       },
+      users: () => [
+        {
+          id: 'id1...',
+          userName: 'devMoisa1',
+        },
+        {
+          id: 'id2...',
+          userName: 'devMoisa2',
+        },
+      ],
     },
   },
 });
