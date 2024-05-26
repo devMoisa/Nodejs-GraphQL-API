@@ -1,3 +1,7 @@
+query PING {
+  ping
+}
+
 query GET_USER {
   user {
     id
