@@ -7,7 +7,9 @@ const server = new ApolloServer({
       name: String
       age: Int
       average: Float
-      isHuman: Boolean!
+      isHuman: Boolean
+      arrayOfStrings: [String]
+      arrayOfNumbers: [Int!]!
     }
   `,
 
@@ -18,6 +20,7 @@ const server = new ApolloServer({
       age: () => 26,
       average: () => 50.5,
       isHuman: () => false,
+      arrayOfStrings: () => ['A', 'B', 'C'],
     },
   },
 });
