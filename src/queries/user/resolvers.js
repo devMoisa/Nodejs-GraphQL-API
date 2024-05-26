@@ -5,17 +5,9 @@ const user = () => {
   };
 };
 
-const users = () => {
-  return [
-    {
-      id: '1',
-      userName: 'devMoises1',
-    },
-    {
-      id: '2',
-      userName: 'devMoises2',
-    },
-  ];
+const users = async () => {
+  const users = await fetch('http://localhost:3000/users');
+  return users.json();
 };
 
 export const userResolvers = {
