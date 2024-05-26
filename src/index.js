@@ -21,6 +21,7 @@ const server = new ApolloServer({
       average: () => 50.5,
       isHuman: () => false,
       arrayOfStrings: () => ['A', 'B', 'C'],
+      arrayOfNumbers: () => [1, 2, 3, 42],
     },
   },
 });
