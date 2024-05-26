@@ -10,7 +10,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "apollo-server": "^3.13.0"
+  },
   "devDependencies": {
     "nodemon": "^3.1.1",
     "sucrase": "^3.35.0"
