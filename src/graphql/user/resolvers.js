@@ -5,7 +5,7 @@ const users = async (_, __, { getUsers }) => {
 
 const user = async (_, { id }, { getUsers }) => {
   const response = await getUsers('/' + id);
-  return await response.json();
+  return response.json();
 };
 
 export const userResolvers = {

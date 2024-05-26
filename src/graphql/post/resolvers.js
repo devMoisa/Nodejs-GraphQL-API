@@ -1,11 +1,13 @@
 const post = async (_, { id }, { getPosts }) => {
   const response = await getPosts('/' + id);
-  return await response.json();
+  return response.json();
 };
 
 const posts = async (_, __, { getPosts }) => {
   const response = await getPosts();
-  return await response.json();
+  console.log('DEBUG', response);
+
+  return response.json();
 };
 
 export const postResolver = {
